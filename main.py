@@ -18,7 +18,8 @@ driver_options.add_argument("disable-dev-shm-usage")
 # driver_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(service=service, options=driver_options)
 
-
+USER_EMAIL = "YOUR MAIL"
+USER_PASSWORD = "YOUR PASSWORD"
 def get_url(keyword, desired_location):
     """
     selenium will open the search url formulated from the keyword and location
