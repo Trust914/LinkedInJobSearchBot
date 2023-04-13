@@ -20,6 +20,10 @@ driver = webdriver.Chrome(service=service, options=driver_options)
 
 USER_EMAIL = "YOUR MAIL"
 USER_PASSWORD = "YOUR PASSWORD"
+DESIRED_JOB = "DevOps"
+LOCATION = "Worldwide"
+
+
 def get_url(keyword, desired_location):
     """
     selenium will open the search url formulated from the keyword and location
@@ -157,11 +161,6 @@ def run_bot(email, password, job_name, job_location):
     save_data(raw_data=job_raw_data, job_title=job_name, job_place=job_location)
 
 
-user_email = "trustezekiel.okezie@gmail.com"
-user_password = "Trust745@"
-desired_job = "DevOps"
-location = "Worldwide"
-
 if __name__ == "__main__":
-    run_bot(job_name=desired_job, job_location=location, email=user_email,
-            password=user_password)
+    run_bot(job_name=DESIRED_JOB, job_location=LOCATION, email=USER_EMAIL,
+            password=USER_PASSWORD)
