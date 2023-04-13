@@ -9,8 +9,13 @@ from selenium.webdriver.common.keys import Keys
 
 # Required dependencies to use selenium
 service = service.Service("chromedriver.exe")
-driver_options = options.Options()
-driver_options.add_experimental_option("detach", True)
+
+# Set chrome options for working with headless mode (no screen)
+driver_options = webdriver.ChromeOptions()
+driver_options.add_argument("headless")
+driver_options.add_argument("no-sandbox")
+driver_options.add_argument("disable-dev-shm-usage")
+# driver_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(service=service, options=driver_options)
 
 
