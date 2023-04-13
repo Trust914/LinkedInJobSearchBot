@@ -18,6 +18,7 @@ driver_options.add_argument("disable-dev-shm-usage")
 # driver_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(service=service, options=driver_options)
 
+# User query variables
 USER_EMAIL = "YOUR MAIL"
 USER_PASSWORD = "YOUR PASSWORD"
 DESIRED_JOB = "DevOps"
